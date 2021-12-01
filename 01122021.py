@@ -11,7 +11,10 @@ def compare(previous, current):
         global counter
         counter += 1
 
-for i in range(len(measures_as_int)-1):
-    compare(measures_as_int[i], measures_as_int[i+1])
+for i in range(len(measures_as_int)-3):
+    compare(
+        measures_as_int[i] + measures_as_int[i+1] + measures_as_int[i+2],
+        measures_as_int[i+1] + measures_as_int[i+2] + measures_as_int[i+3]
+    )
 
 print(counter)
