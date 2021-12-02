@@ -7,15 +7,17 @@ class Submarine():
 
     horizontal = 0
     depth = 0
+    aim = 0
 
     def move_forward(self, unit):
         self.horizontal += unit
+        self.depth += (self.aim * unit)
 
     def move_up(self, unit):
-        self.depth -= unit
+        self.aim -= unit
 
     def move_down(self, unit):
-        self.depth += unit
+        self.aim += unit
 
 
 sub = Submarine()
